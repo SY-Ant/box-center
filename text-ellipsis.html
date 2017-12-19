@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<style type="text/css">
+
+	div  {
+		width: 100px;
+		height: 100px;
+	}
+	/*方案1   使用文字不换行进行相关的操作*/
+	p {
+		overflow:hidden;
+		white-space: nowrap;//不换行
+		text-overflow: ellipsis;//代表被修剪的文本使用省略号表示
+	}
+	/*方案二  使用css3的新属性  display:-webkit-box*/
+
+	p {
+		display: -webkit-box;
+		-webkit-box-orient:  vertical;
+		/*从上向下垂直排列子元素*/
+		-webkit-line-clamp:3;
+		/*保证相关的文字展示几列*/
+		overflow:hidden;
+	}
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<div>
+	<p>kajshgoihageoiuaewowhg kadhgoi sdgalghwapbaid eoiwabkahfo</p>
+</div>
+
+
+
+</body>
+</html>
